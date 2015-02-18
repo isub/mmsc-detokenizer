@@ -1,11 +1,20 @@
 #ifndef _DETOKENIZER_AUXILIARY_H_
 #define _DETOKENIZER_AUXILIARY_H_
 
-#include "utils/config/config.h"
-#include "utils/log/log.h"
+#ifdef __cplusplus
+extern "C" {
+#endif
 
-int detokenizer_apply_settings (
-	const char *p_pszSettings,
-	CConfig &p_coConfig);
+int aux_init (const char *p_pszSettings);
+
+int aux_fini ();
+
+char * aux_detokenize (const char *p_pszRequestIP);
+
+char * aux_gettoken (const char *p_pszMSISDN);
+
+#ifdef __cplusplus
+}
+#endif
 
 #endif
