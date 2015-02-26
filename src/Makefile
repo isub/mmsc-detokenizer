@@ -25,7 +25,7 @@ mmsc-detokenizer: ./obj/mmsc-detokenizer.o ./obj/dbpool.o ./obj/detokenizer-auxi
 	g++ -fPIC -c $(UTL_DIR)/log/log.cpp -o ./obj/log.o
 
 install:
-	cp -f ../libmmsc-detokenizer.so /usr/local/lib
+	cp -f ../*.so /usr/local/lib
 
 clean:
-	rm -f ./obj/* ../libmmsc-detokenizer.so
+	rm -f ./obj/* ../*.so
